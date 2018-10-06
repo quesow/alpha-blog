@@ -1,0 +1,28 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin: 0;
+}
+header {
+  padding: 8px;
+  background-image: url(asset_path("chair-cup-of-coffee-desk-1459103.jpg"));
+  background-size: cover;
+  color: white;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10vh;
+}
+footer{
+  background: #474747;
+  color: white;
+  padding: 0px 0px 0px 8px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  > p > a {
+    color: yellow;
+  }
+}

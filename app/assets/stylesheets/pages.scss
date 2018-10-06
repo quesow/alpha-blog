@@ -1,0 +1,19 @@
+.section-container{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  > .section {
+    flex: 1;
+    padding: 8px;
+    >img{
+      width: 100%;
+    }
+    > ul > li {
+      list-style: none;
+    }
+  }
+}
+.section-noflex{
+  padding: 20px;
+  text-align: center;
+}
