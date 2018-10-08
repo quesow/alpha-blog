@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 header {
   padding: 8px;
@@ -15,13 +18,13 @@ header {
   flex-direction: column;
   padding-top: 10vh;
 }
+content{
+  flex: 1;
+}
 footer{
   background: #474747;
   color: white;
   padding: 0px 0px 0px 8px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   > p > a {
     color: yellow;
   }
