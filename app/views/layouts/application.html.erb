@@ -16,6 +16,11 @@
       <p>Take a look in https://www.udemy.com</p>
     </header>
     <content>
+      <% flash.each do |name, msg| %>
+        <ul>
+          <li><%= msg %></li>
+        </ul>
+      <% end %>
       <%= yield %>
     </content>
     <footer>
