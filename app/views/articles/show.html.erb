@@ -4,3 +4,8 @@
 <p>
   <%= @article.description %>
 </p>
+
+<%= render 'links' %>
+<div>
+  <%= link_to 'Edit this article', edit_article_path(@article) %>
+</div>

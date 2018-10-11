@@ -10,24 +10,11 @@
   </head>
 
   <body>
-    <header>
-      <h1>Welcome to AlphaBlog</h1>
-      <h3>First rails application made with The Complete Ruby on Rails Developer course</h3>
-      <p>Take a look in https://www.udemy.com</p>
-    </header>
+    <%= render 'layouts/header' %>
     <content>
-      <% flash.each do |name, msg| %>
-        <ul>
-          <li><%= msg %></li>
-        </ul>
-      <% end %>
+      <%= render 'layouts/messages' %>
       <%= yield %>
     </content>
-    <footer>
-      <p>Posted by: Jesua Betancor</p>
-      <p>Contact information: <a href="mailto:jesuae@example.com">
-      jesua@example.com</a>.</p>
-      <p>Photos from: <a href="https://www.pexels.com/">https://www.pexels.com/</a>.</p>
-    </footer>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
