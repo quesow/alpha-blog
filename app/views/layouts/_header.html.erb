@@ -1,10 +1,49 @@
-<header>
-  <h1>Welcome to AlphaBlog</h1>
-  <h3>First rails application made with The Complete Ruby on Rails Developer course</h3>
-  <p>Take a look in https://www.udemy.com</p>
-  </header>
-<nav>
-  <%= link_to 'Home', root_path %>
-  <%= link_to 'Articles', articles_path %>
-  <%= link_to 'About', about_path %>
-</nav>
+<section class="hero is-danger">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <header class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <%= image_tag 'banner-logo.png' %>
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroC" class="navbar-menu">
+          <div class="navbar-end">
+            <%= link_to 'GitHub', "https://github.com/quesow/alpha-blog", class: 'navbar-item', class_active: 'is-active', active: :exact %>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        Welcome to AlphaBlog
+      </h1>
+      <h2 class="subtitle">
+        First rails application made with The Complete Ruby on Rails Developer course
+      </h2>
+    </div>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <%= active_link_to 'Home', root_path, class_active: 'is-active', active: :exact, wrap_tag: :li %>
+          <%= active_link_to 'About', about_path, class_active: 'is-active', wrap_tag: :li %>
+          <%= active_link_to 'Articles', articles_path, class_active: 'is-active', wrap_tag: :li %>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>

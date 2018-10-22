@@ -1,17 +1,66 @@
-<div class="section-noflex">
-  <h1>Home</h1>
-  <p>New features soon...</p>
-</div>
-<div class="section-container">
-  <div class="section">
-      <ul>
-        <li>Outstanding</li>
-        <li>Exceptionally good</li>
-        <li>Marvellous</li>
-        <li>Magnificent</li>
-      </ul>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Home</h1>
+    <h2 class="subtitle">
+      New features <strong>soon</strong>...
+    </h2>
   </div>
-  <div class="section">
-    <%= image_tag 'daytime-flow-h2o-1295138.jpg' %>
+</section>
+
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-primary">
+          <p class="title">Outstanding</p>
+          <p class="subtitle">Invented Company 1</p>
+        </article>
+        <article class="tile is-child notification is-warning">
+          <p class="title">Exceptionally good</p>
+          <p class="subtitle">Invented Company 2</p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title">I give my tens to this page!</p>
+          <p class="subtitle">Invented Company 3</p>
+          <figure class="image is-4by3">
+            <%= image_tag 'daytime-flow-h2o-1295138.jpg' %>
+          </figure>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-danger">
+        <p class="title">Marvellous</p>
+        <p class="subtitle">Invented Company 4</p>
+        <div class="content">
+          I want some more!
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child notification is-success">
+      <div class="content">
+        <p class="title">Magnificent</p>
+        <p class="subtitle">Invented Company 5</p>
+        <div class="content">
+          <p>
+            Seriously, this web page changed my life! Everytime I have a moment I
+            step by and watch the Magnificent colors and amazing structure :)
+          </p>
+          <p>
+            And now: some lorem ipsum text to fit the square!
+          </p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+          <p>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+          </p>
+        </div>
+      </div>
+    </article>
   </div>
 </div>

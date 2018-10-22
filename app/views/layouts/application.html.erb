@@ -11,10 +11,10 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <content>
+    <div class="main-content container is-fluid">
       <%= render 'layouts/messages' %>
       <%= yield %>
-    </content>
+    </div>
     <%= render 'layouts/footer' %>
   </body>
 </html>

@@ -33,7 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
+gem "bulma-rails", "~> 0.7.2"
+gem 'active_link_to'
 
 group :production do
   gem 'pg'
