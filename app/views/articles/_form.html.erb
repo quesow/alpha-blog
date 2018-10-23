@@ -10,17 +10,15 @@
 <% end %>
 
 <%= form_for @article do |f| %>
-  <p>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="field">
+    <%= f.label :title, class: 'label' %>
+    <%= f.text_field :title, class: 'input' %>
+  </div>
+  <div class="field">
+    <%= f.label :description, class: 'label' %>
+    <%= f.text_area :description, class: 'textarea' %>
+  </div>
+  <div class="control">
+    <%= f.submit 'Create Article', class: 'button is-success' %>
+  </div>
 <% end %>
-
-<%= render 'links' %>
