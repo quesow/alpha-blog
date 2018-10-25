@@ -2,7 +2,7 @@
   <div class="container has-text-centered">
     <h1 class="title">Listing articles</h1>
     <h2 class="subtitle">
-      <%= link_to 'New Article', new_article_path, class: 'button is-primary' %>
+      <%= link_to 'New Article', new_article_path, class: 'button is-success' %>
     </h2>
   </div>
 </section>
@@ -28,7 +28,7 @@
       <td><%= article.title %></td>
       <td><%= article.description %></td>
       <td>
-        <%= link_to 'Show', article_path(article), class: 'button is-success' %>
+        <%= link_to 'Show', article_path(article), class: 'button is-primary' %>
         <%= link_to 'Edit', edit_article_path(article), class: 'button is-warning' %>
         <%= link_to 'Destroy', article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: 'button is-danger' %>
       </td>

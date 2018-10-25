@@ -4,12 +4,12 @@
       <%= @article.title %>
     </h1>
     <p>
-      <%= @article.description %>
+      <%= simple_format(@article.description) %>
     </p>
+    <hr/>
+    <%= link_to 'Edit this article', edit_article_path(@article), class: 'button is-warning' %>
+    <%= link_to 'Destroy', article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: 'button is-danger' %>
   </div>
 </section>
 
 <%= render 'links' %>
-<div>
-  <%= link_to 'Edit this article', edit_article_path(@article) %>
-</div>
