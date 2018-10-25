@@ -1,5 +1,8 @@
 <% flash.each do |name, msg| %>
-  <ul class="notification">
-    <li><%= msg %></li>
-  </ul>
+<section class="section">
+  <div class="notification is-<%= "#{name}" %>">
+    <a href="#" class="delete"></a>
+    <%= msg %>
+  </div>
+</section>
 <% end %>
