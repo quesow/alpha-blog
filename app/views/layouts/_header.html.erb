@@ -1,23 +1,23 @@
-<section class="hero is-dark">
+<section class="hero is-light">
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
-    <header class="navbar">
+    <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <%= link_to image_tag('banner-logo.png'), root_path, class: 'navbar-item' %>
-          <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+          <%= link_to image_tag('banner-logo-dark.png'), root_path, class: 'navbar-item' %>
+          <span id="navbarMenuHeroC-trigger" class="navbar-burger burger" data-target="navbarMenuHeroC">
             <span></span>
             <span></span>
             <span></span>
           </span>
         </div>
-        <div id="navbarMenuHeroC" class="navbar-menu">
-          <div class="navbar-end">
+        <div class="navbar-end">
+          <div id="navbarMenuHeroC" class="navbar-menu"> <!-- is-active -->
             <%= link_to 'GitHub', "https://github.com/quesow/alpha-blog", class: 'navbar-item', class_active: 'is-active', active: :exact %>
           </div>
         </div>
       </div>
-    </header>
+    </nav>
   </div>
 
   <!-- Hero content: will be in the middle -->
@@ -31,40 +31,48 @@
       </h2>
     </div>
   </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <span id="navBar-trigger" class="navbar-burger burger" data-target="navBar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navBar" class="navbar-menu"> <!-- is-active -->
+        <div class="navbar-start">
+          <%= active_link_to 'Home', root_path, class_active: 'is-active', active: :exact, class: 'navbar-item' %>
+          <%= active_link_to 'About', about_path, class_active: 'is-active', class: 'navbar-item' %>
+
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Articles
+            </a>
+
+            <div class="navbar-dropdown">
+              <%= active_link_to 'Listing articles', articles_path, class_active: 'is-active', active: :exact, class: 'navbar-item' %>
+              <%= active_link_to 'New Article', new_article_path, class_active: 'is-active', class: 'navbar-item' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 </section>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <%= link_to image_tag('banner-logo-dark.png'), root_path, class: 'navbar-item' %>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start">
-      <%= active_link_to 'Home', root_path, class_active: 'is-active', active: :exact, class: 'navbar-item' %>
-      <%= active_link_to 'About', about_path, class_active: 'is-active', class: 'navbar-item' %>
-
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Articles
-        </a>
-
-        <div class="navbar-dropdown">
-          <%= active_link_to 'Listing articles', articles_path, class_active: 'is-active', active: :exact, class: 'navbar-item' %>
-          <%= active_link_to 'New Article', new_article_path, class_active: 'is-active', class: 'navbar-item' %>
-        </div>
-      </div>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>

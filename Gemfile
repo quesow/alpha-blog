@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem "bulma-rails", "~> 0.7.2"
 gem 'active_link_to'
+gem 'jquery-rails'
 
 group :production do
   gem 'pg'
