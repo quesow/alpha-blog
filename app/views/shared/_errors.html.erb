@@ -1,7 +1,7 @@
 <% if obj.errors.any? %>
 <article class="message is-danger">
   <div class="message-header">
-    <p><%= pluralize(obj.errors.count, "error")%> prevented the <%= obj %> form being created</p>
+    <p><%= pluralize(obj.errors.count, "error")%> prevented the <%= obj.model_name %> form being created</p>
   </div>
   <div class="message-body">
     <ul>
