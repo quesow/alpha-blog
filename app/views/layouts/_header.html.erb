@@ -46,8 +46,6 @@
         <div class="navbar-start">
           <%= active_link_to 'Home', root_path, class_active: 'is-active', active: :exact, class: 'navbar-item' %>
           <%= active_link_to 'About', about_path, class_active: 'is-active', class: 'navbar-item' %>
-
-
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
               Articles
@@ -58,14 +56,20 @@
               <%= active_link_to 'New Article', new_article_path, class_active: 'is-active', class: 'navbar-item' %>
             </div>
           </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Users
+            </a>
+            <div class="navbar-dropdown">
+              <%= active_link_to 'Listing bloggers', users_path, class_active: 'is-active', active: :exact, class: 'navbar-item' %>
+            </div>
+          </div>
         </div>
 
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-primary">
-                <strong>Sign up</strong>
-              </a>
+              <%= link_to 'Sign Up', signup_path, class: 'button is-primary' %>
               <a class="button is-light">
                 Log in
               </a>

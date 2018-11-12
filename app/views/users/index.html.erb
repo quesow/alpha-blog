@@ -1,0 +1,27 @@
+<section class="section">
+  <div class="container has-text-centered">
+    <h1 class="title">All Alpha Bloggers</h1>
+  </div>
+  <% @users.each do |user| %>
+  <div class="card">
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <%= link_to gravatar_for(user), user_path(user) %>
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4"><%= link_to user.username, user_path(user) %></p>
+          <p class="subtitle is-6"><%= user.email %></p>
+        </div>
+      </div>
+
+      <div class="content">
+        <%= pluralize(user.articles.count, "article") if user.articles %>
+        <br>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</section>
