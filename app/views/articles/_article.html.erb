@@ -1,0 +1,22 @@
+<section class="section">
+  <% obj.each do |article| %>
+    <div class='box content is-medium'>
+      <h1 class="title"><%= link_to article.title, article_path(article) %></h1>
+      <p>
+        <%= truncate(article.description) %>
+      </p>
+      <hr/>
+      <p>
+        <small>Created by: <%= article.user.username %>,
+          <%= time_ago_in_words(article.created_at) %> ago,
+          last updated: <%= time_ago_in_words(article.updated_at) %> ago
+        </small>
+      </p>
+      <hr/>
+      <p>
+        <%= link_to 'Edit', edit_article_path(article), class: 'button is-warning' %>
+        <%= link_to 'Destroy', article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: 'button is-danger' %>
+      </p>
+    </div>
+  <% end %>
+</section>
