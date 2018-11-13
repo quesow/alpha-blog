@@ -10,5 +10,7 @@
     <h2 class="subtitle"><%= @user.username %>'s articles</h2>
   </div>
 
-  <%= render 'articles/article', obj: @user.articles.each %>
+  <%= render 'shared/pagination', obj: @user_articles %>
+  <%= render 'articles/article', obj: @user_articles.each %>
+  <%= render 'shared/pagination', obj: @user_articles %>
 </section>
