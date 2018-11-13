@@ -69,10 +69,12 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <%= link_to 'Sign Up', signup_path, class: 'button is-primary' %>
-              <a class="button is-light">
-                Log in
-              </a>
+              <% if logged_in? %>
+                <%= link_to 'Log out', logout_path, class: 'button is-danger', method: 'DELETE' %>
+              <% else %>
+                <%= link_to 'Sign Up', signup_path, class: 'button is-primary' %>
+                <%= link_to 'Log in', login_path, class: 'button is-light' %>
+              <% end %>
             </div>
           </div>
         </div>
