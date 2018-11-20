@@ -53,32 +53,37 @@
 
             <div class="navbar-dropdown">
               <%= active_link_to 'Listing articles', articles_path, class_active: 'is-active', active: :exact, class: 'navbar-item' %>
-              <%= active_link_to 'New Article', new_article_path, class_active: 'is-active', class: 'navbar-item' %>
-            </div>
-          </div>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              Users
-            </a>
-            <div class="navbar-dropdown">
-              <%= active_link_to 'Listing bloggers', users_path, class_active: 'is-active', active: :exact, class: 'navbar-item' %>
-            </div>
-          </div>
-        </div>
-
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
               <% if logged_in? %>
-                <%= link_to 'Log out', logout_path, class: 'button is-danger', method: 'DELETE' %>
-              <% else %>
-                <%= link_to 'Sign Up', signup_path, class: 'button is-primary' %>
-                <%= link_to 'Log in', login_path, class: 'button is-light' %>
+                <%= active_link_to 'New Article', new_article_path, class_active: 'is-active', class: 'navbar-item' %>
               <% end %>
             </div>
           </div>
         </div>
       </div>
-    </nav>
+
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Users
+          </a>
+          <div class="navbar-dropdown">
+            <%= active_link_to 'Listing bloggers', users_path, class_active: 'is-active', active: :exact, class: 'navbar-item' %>
+            <% if logged_in? %>
+              <%= active_link_to 'Edit your profile', edit_user_path(current_user), class_active: 'is-active', active: :exact, class: 'navbar-item' %>
+              <%= active_link_to 'View your profile', user_path(current_user), class_active: 'is-active', active: :exact, class: 'navbar-item' %>
+            <% end %>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <div class="buttons">
+            <% if logged_in? %>
+              <%= link_to 'Log out', logout_path, class: 'button is-danger', method: 'DELETE' %>
+            <% else %>
+              <%= link_to 'Sign Up', signup_path, class: 'button is-primary' %>
+              <%= link_to 'Log in', login_path, class: 'button is-light' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
   </div>
 </section>
