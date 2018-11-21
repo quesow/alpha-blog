@@ -70,7 +70,7 @@
             <%= active_link_to 'Listing bloggers', users_path, class_active: 'is-active', active: :exact, class: 'navbar-item' %>
             <% if logged_in? %>
               <%= active_link_to 'Edit your profile', edit_user_path(current_user), class_active: 'is-active', active: :exact, class: 'navbar-item' %>
-              <%= active_link_to 'View your profile', user_path(current_user), class_active: 'is-active', active: :exact, class: 'navbar-item' %>
+              <%= active_link_to current_user.admin? ? "View your admin profile" : "View your profile", user_path(current_user), class_active: 'is-active', active: :exact, class: 'navbar-item' %>
             <% end %>
           </div>
         </div>

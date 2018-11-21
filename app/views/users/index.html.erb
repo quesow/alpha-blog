@@ -23,6 +23,21 @@
         <br>
       </div>
     </div>
+
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        <span>
+          <%= link_to "View profile", user_path(user) %>
+        </span>
+      </p>
+      <% if logged_in? && current_user.admin? %>
+      <p class="card-footer-item">
+        <span>
+          <%= link_to 'Destroy user', user_path(user), method: :delete, data: {confirm: "Are you sure?"}, class: 'button is-danger' %>
+        </span>
+      </p>
+      <% end %>
+    </footer>
   </div>
   <% end %>
 </section>
